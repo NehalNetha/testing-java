@@ -1,0 +1,184 @@
+How to use XPath for
+automating, web
+elements
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+31
+3
+Navigating web
+elements using Xpath
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+32
+3
+Environment Setup
+and basic structure
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+33
+3
+Automation Test script
+for opening web
+applications
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+34
+3
+Functional testing of
+login application with
+selenium
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+35
+3
+Executing automation
+script for navigating
+drop down
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+36
+3
+Navigating check box,
+radio buttons using
+selenium
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+37
+3
+automation testing of
+frames and webtables
+application with
+selenium
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+38
+3
+Automating drag and
+drop images
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+39
+3
+Applying maven
+framework and
+repository in scripts
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+40
+3
+Functional testing
+using maven
+framework
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+41
+3
+Automation testing
+using testNG
+framework with
+selenium and maven
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+42
+3
+Creating Test reports
+using testNG
+framework
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+43
+3
+Hands
+-on real
+-time
+Data Driven
+framework
+Implementation
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+44
+3
+Login scenario using
+Data Driven Testing
+Teaching
+& Hands
+on
+Madhuri Dharrao Lecture &
+Hands
+-On
+4
+45
+3
+Creating Output File
+and reports in Data
+driven testing 
