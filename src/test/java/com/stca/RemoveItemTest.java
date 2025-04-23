@@ -99,7 +99,6 @@ public class RemoveItemTest {
         Assert.assertTrue(keptItemFound, itemToKeepName + " was not found in the cart after removal of another item.");
         pause();
 
-         // Verify the remaining item still has its remove button
         try {
             WebElement keptItemRemoveButton = driver.findElement(By.xpath("//div[@class='inventory_item_name' and text()='" + itemToKeepName + "']/ancestor::div[@class='cart_item']//button[starts-with(@id, 'remove-')]"));
             Assert.assertTrue(keptItemRemoveButton.isDisplayed(), "Remove button for the remaining item is not displayed.");

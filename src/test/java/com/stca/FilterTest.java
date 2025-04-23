@@ -26,7 +26,6 @@ public class FilterTest {
     private WebDriverWait wait;
     private final long PAUSE_DURATION_MS = 500; // Pause for 0.5 seconds
 
-    // Helper method for pausing (use explicit waits where possible)
     private void pause() {
         try {
             Thread.sleep(PAUSE_DURATION_MS);
@@ -41,14 +40,14 @@ public class FilterTest {
         WebDriverManager.chromedriver().setup();
         ChromeOptions options = new ChromeOptions();
         options.addArguments("--start-maximized");
-        // options.addArguments("--headless"); // Optional: run headless
+
         driver = new ChromeDriver(options);
         wait = new WebDriverWait(driver, Duration.ofSeconds(10));
     }
 
     @Test(description = "TC10: Verify product sorting functionality (Price low to high).")
     public void testSortPriceLowToHigh() {
-        // 1. Navigate & Login
+
         driver.get("https://www.saucedemo.com/");
         pause();
 
@@ -64,20 +63,20 @@ public class FilterTest {
 
         WebElement sortDropdownElement = driver.findElement(By.className("product_sort_container"));
         Select sortDropdown = new Select(sortDropdownElement);
-        sortDropdown.selectByValue("lohi"); // Value for "Price (low to high)"
+        sortDropdown.selectByValue("lohi"); 
         System.out.println("Selected sort option: Price (low to high)");
-        pause(); // Allow time for potential DOM update after sorting
+        pause();
 
         List<WebElement> priceElements = driver.findElements(By.className("inventory_item_price"));
         List<Double> actualPrices = new ArrayList<>();
         for (WebElement priceElement : priceElements) {
-            // Remove '$' and convert to double
+            
             actualPrices.add(Double.parseDouble(priceElement.getText().replace("$", "")));
         }
         System.out.println("Actual prices after sorting: " + actualPrices);
 
         List<Double> expectedSortedPrices = new ArrayList<>(actualPrices);
-        Collections.sort(expectedSortedPrices); // Sort the collected prices numerically
+        Collections.sort(expectedSortedPrices); 
 
         System.out.println("Expected prices after sorting: " + expectedSortedPrices);
         Assert.assertEquals(actualPrices, expectedSortedPrices, "Items are not sorted correctly by price (low to high).");
@@ -88,7 +87,7 @@ public class FilterTest {
 
     @AfterTest
     public void tearDown() {
-        pause(); // Pause before closing
+        pause(); 
         if (driver != null) {
             driver.quit();
         }

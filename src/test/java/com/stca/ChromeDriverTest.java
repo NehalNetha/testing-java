@@ -64,18 +64,14 @@ public class ChromeDriverTest {
     
     @Test(priority = 2)
     public void testViewCartContents() {
-        // Navigate to cart page
         driver.findElement(By.xpath("//*[@id='shopping_cart_container']/a")).click();
         
-        // Verify cart page loaded
         Assert.assertTrue(driver.findElement(By.xpath("//div[@id='cart_contents_container']")).isDisplayed(),
                 "Cart contents not displayed");
         
-        // Verify all items are in cart
         List<WebElement> cartItems = driver.findElements(By.xpath("//div[@class='cart_item']"));
         System.out.println("Number of items in cart: " + cartItems.size());
         
-        // Verify each item has remove button
         for (WebElement item : cartItems) {
             Assert.assertTrue(item.findElement(By.xpath(".//button[starts-with(@id, 'remove')]")).isDisplayed(),
                     "Remove button not found for item");
@@ -86,33 +82,26 @@ public class ChromeDriverTest {
     
     @Test(priority = 3)
     public void testCheckoutProcess() {
-        // Click checkout
         driver.findElement(By.xpath("//button[@id='checkout']")).click();
         
-        // Fill checkout information
         driver.findElement(By.xpath("//input[@id='first-name']")).sendKeys("Test");
         driver.findElement(By.xpath("//input[@id='last-name']")).sendKeys("User");
         driver.findElement(By.xpath("//input[@id='postal-code']")).sendKeys("12345");
         driver.findElement(By.xpath("//input[@id='continue']")).click();
         
-        // Verify checkout overview is displayed
         Assert.assertTrue(driver.findElement(By.xpath("//div[@class='checkout_summary_container']")).isDisplayed(), 
                 "Checkout overview not displayed");
         
-        // Verify total amount is calculated correctly
         WebElement summarySubtotal = driver.findElement(By.xpath("//div[@class='summary_subtotal_label']"));
         Assert.assertTrue(summarySubtotal.isDisplayed(), "Subtotal not displayed");
         
-        // Complete checkout
         driver.findElement(By.xpath("//button[@id='finish']")).click();
         
-        // Verify checkout complete
         Assert.assertTrue(driver.findElement(By.xpath("//h2[@class='complete-header']")).isDisplayed(), 
                 "Checkout complete message not displayed");
         
         System.out.println("Successfully completed checkout process for all items");
         
-        // Keep browser open for verification
         try {
             Thread.sleep(300000); // Keep open for 5 minutes
         } catch (InterruptedException e) {
@@ -122,8 +111,6 @@ public class ChromeDriverTest {
     
     @AfterTest
     public void tearDown() {
-        // Browser will stay open for verification
-        // Remove driver.quit() to keep browser open
         System.out.println("Browser left open for verification");
     }
 } 
